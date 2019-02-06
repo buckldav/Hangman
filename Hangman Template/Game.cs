@@ -8,30 +8,29 @@ namespace Hangman
 {
     class Game
     {
+        // *** FIELDS ***
+        // The word to be guessed
         private string word;
+        // The word the users can see (initialized as '---')
         private string displayWord;
+        // The lives remaining
         private int lives;
 
+        // *** CONSTRUCTOR ***
         public Game()
         {
             // TODO: Initialize all of the fields
-            word = "guess";
-            displayWord = "-----";
-            lives = 7;
         }
 
-        /*
-         * This method takes the user input (guess), checks if the word contains it,
-         * then replaces the hyphens of the displayWord with the guessed letters.
-         * If the guessed letters are not contained in the word, lose a life and print
-         * the number of lives left for the user to see. 
-         * 
-         * No need to edit this method
-         */
+        // *** METHODS ***
+
+        // Used for checking a user's guess
+        // No need to edit this method
         public void GuessLetter(string guess)
         {
             if (word.Contains(guess) && guess.Length > 0)
             {
+                // Iterate through the word
                 for (int i = 0; i < word.Length; i++)
                 {
                     if (word[i] == guess[0])
@@ -43,30 +42,25 @@ namespace Hangman
             }
             else
             {
+                // Lose a life and print the number of lives remaining
                 lives--;
                 Console.WriteLine($"You have {lives} lives left");
             }
         }
 
-        /*
-         * TODO: Get the displayWord
-         */
+        // TODO: Get the displayWord
         public string GetDisplayWord()
         {
             return null;
         }
 
-        /*
-         * TODO: Return true if the game is solved, otherwise false 
-         */
+        // TODO: Return true if the game is solved, otherwise false 
         public bool Solved()
         {
             return false;
         }
 
-        /*
-         * TODO: Return true if there are no lives left, otherwise false
-         */
+        // TODO: Return true if there are no lives left, otherwise false
         public bool Dead()
         {
             return false;
