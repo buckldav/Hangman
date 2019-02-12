@@ -28,23 +28,28 @@ namespace Hangman
         // No need to edit this method
         public void GuessLetter(string guess)
         {
-            if (word.Contains(guess) && guess.Length > 0)
+            if (guess.Length == 1)
             {
-                // Iterate through the word
-                for (int i = 0; i < word.Length; i++)
+                if (word.Contains(guess))
                 {
-                    if (word[i] == guess[0])
+                    for (int i = 0; i < word.Length; i++)
                     {
-                        // Change the letters in the display word that equal the guessed letter
-                        displayWord = displayWord.Remove(i, 1).Insert(i, guess);
+                        if (word[i] == guess[0])
+                        {
+                            // Change the letters in the display word that equal the guessed letter
+                            displayWord = displayWord.Remove(i, 1).Insert(i, guess);
+                        }
                     }
+                }
+                else
+                {
+                    lives--;
+                    Console.WriteLine($"You have {lives} lives left");
                 }
             }
             else
             {
-                // Lose a life and print the number of lives remaining
-                lives--;
-                Console.WriteLine($"You have {lives} lives left");
+                Console.WriteLine("Invalid guess, guess one letter at a time.");
             }
         }
 

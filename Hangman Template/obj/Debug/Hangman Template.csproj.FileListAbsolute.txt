@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\Hangman\Hangman Template\bin\Debug\Hangman Template.exe.config
+C:\Users\David\Desktop\Hangman\Hangman Template\bin\Debug\Hangman Template.exe
+C:\Users\David\Desktop\Hangman\Hangman Template\bin\Debug\Hangman Template.pdb
+C:\Users\David\Desktop\Hangman\Hangman Template\obj\Debug\Hangman Template.csprojAssemblyReference.cache
+C:\Users\David\Desktop\Hangman\Hangman Template\obj\Debug\Hangman Template.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\Hangman\Hangman Template\obj\Debug\Hangman Template.exe
+C:\Users\David\Desktop\Hangman\Hangman Template\obj\Debug\Hangman Template.pdb
